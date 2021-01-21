@@ -1,0 +1,45 @@
+title: Twan's Blog
+description: >
+  Hi ! My name is Antoine, but people usually call me "Twan". This blog
+  is a mere attempt at sharing some interesting stuff I came across or some
+  kind of memory dump for later reference...
+
+timezone: Europe/Brussels
+
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - LICENCE
+  - README.md
+  - CNAME
+
+remote_theme: bitbrain/jekyll-dash
+dash:
+  #date_format: "%b %-d, %Y"
+
+  # disqus:
+  #   shortname: bitbrain-github-io
+
+  # generate social links in footer
+  # supported colors: green, red, orange, blue, cyan, pink, teal, yellow, indigo, purple
+  social_links:
+    - url: https://twitter.com/Twanislas
+      icon: twitter-square
+      color: cyan
+    - url: https://github.com/Twanislas
+      icon: github-square
+      color: purple
+avatar_source: github
+github_username: Twanislas
+paginate: 5
+paginate_path: "/blog/page:num/"
+
+
+plugins:
+- jekyll-feed
+- jekyll-gist
+- jekyll-github-metadata
+- jekyll-paginate
+- jekyll-seo-tag
+- jekyll-sitemap
+- jekyll-titles-from-headings
