@@ -23,6 +23,9 @@ dash:
   # generate social links in footer
   # supported colors: green, red, orange, blue, cyan, pink, teal, yellow, indigo, purple
   social_links:
+    - url: https://t.me/Twanislas
+      icon: telegram
+      color: cyan
     - url: https://twitter.com/Twanislas
       icon: twitter-square
       color: cyan
