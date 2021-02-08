@@ -1,48 +1,183 @@
-title: Twan's Blog
-description: >
-  Hi ! My name is Antoine, but people usually call me "Twan". This blog
-  is a mere attempt at sharing some interesting stuff I came across or some
-  kind of memory dump for later reference...
+remote_theme           : "mmistakes/minimal-mistakes"
+minimal_mistakes_skin    : "dark" # "air", "aqua", "contrast", "dark", "dirt", "neon", "mint", "plum", "sunrise"
 
-timezone: Europe/Brussels
+# Site Settings
+locale                   : "en-US"
+title                    : "Twan's Blog"
+title_separator          : "|"
+subtitle                 : # site tagline that appears below site title in masthead
+name                     : "Twan"
+description              : "This blog is a mere attempt at sharing some interesting stuff I came across or some kind of memory dump for later reference..."
+url                      : https://blog.twan.ovh
+repository               : Twanislas/blog.twan.ovh
+teaser                   : # path of fallback teaser image, e.g. "/assets/images/500x300.png"
+logo                     : # path of logo image to display in the masthead, e.g. "/assets/images/88x88.png"
+masthead_title           : # overrides the website title displayed in the masthead, use " " for no title
+breadcrumbs              : true # true, false (default)
+words_per_minute         : 200
+comments:
+  provider               : # false (default), "disqus", "discourse", "facebook", "staticman", "staticman_v2", "utterances", "custom"
+  disqus:
+    shortname            : # https://help.disqus.com/customer/portal/articles/466208-what-s-a-shortname-
+  discourse:
+    server               : # https://meta.discourse.org/t/embedding-discourse-comments-via-javascript/31963 , e.g.: meta.discourse.org
+  facebook:
+    # https://developers.facebook.com/docs/plugins/comments
+    appid                :
+    num_posts            : # 5 (default)
+    colorscheme          : # "light" (default), "dark"
+  utterances:
+    theme                : # "github-light" (default), "github-dark"
+    issue_term           : # "pathname" (default)
+  staticman:
+    branch               : # "master"
+    endpoint             : # "https://{your Staticman v3 API}/v3/entry/github/"
+reCaptcha:
+  siteKey                :
+  secret                 :
+search                   : true # true, false (default)
+search_full_content      : true # true, false (default)
+search_provider          : google # lunr (default), algolia, google
+google:
+  search_engine_id       : f87a014bca85a2517 # YOUR_SEARCH_ENGINE_ID
+  instant_search         : true # false (default), true
 
+# Social Sharing
+twitter:
+  username               : Twanislas
+facebook:
+  username               :
+  app_id                 :
+  publisher              :
+og_image                 : # Open Graph/Twitter default site image
+# For specifying social profiles
+# - https://developers.google.com/structured-data/customize/social-profiles
+social:
+  type                   : # Person or Organization (defaults to Person)
+  name                   : # If the user or organization name differs from the site's name
+  links: # An array of links to social media profiles
+
+# Analytics
+analytics:
+  provider               : false # false (default), "google", "google-universal", "google-gtag", "custom"
+  google:
+    tracking_id          :
+    anonymize_ip         : # true, false (default)
+
+# Site Author
+author:
+  name             : "Twan"
+  avatar           : "/assets/avatar.png"
+  bio              : "I like coffee, and automation."
+  location         : "Belgium"
+  email            :
+  links:
+    - label: "Twitter"
+      icon: "fab fa-fw fa-twitter-square"
+      url: "https://twitter.com/Twanislas"
+    - label: "GitHub"
+      icon: "fab fa-fw fa-github"
+      url: "https://github.com/Twanislas"
+    - label: "Telegram"
+      icon: "fab fa-fw fa-telegram"
+      url: "https://t.me/Twanislas"
+
+# Site Footer
+footer:
+  links:
+    - label: "Twitter"
+      icon: "fab fa-fw fa-twitter-square"
+      url: "https://twitter.com/Twanislas"
+    - label: "GitHub"
+      icon: "fab fa-fw fa-github"
+      url: "https://github.com/Twanislas"
+    - label: "Telegram"
+      icon: "fab fa-fw fa-telegram"
+      url: "https://t.me/Twanislas"
+
+
+# Reading Files
+include:
+  - _pages
 exclude:
   - Gemfile
   - Gemfile.lock
   - LICENCE
   - README.md
   - CNAME
+encoding: "utf-8"
+markdown_ext: "markdown,mkdown,mkdn,mkd,md"
 
-remote_theme: bitbrain/jekyll-dash
-dash:
-  #date_format: "%b %-d, %Y"
+markdown: kramdown
+highlighter: rouge
+lsi: false
+excerpt_separator: "\n\n"
+incremental: false
 
-  # disqus:
-  #   shortname: bitbrain-github-io
+kramdown:
+  input: GFM
+  hard_wrap: false
+  auto_ids: true
+  footnote_nr: 1
+  entity_output: as_char
+  toc_levels: 1..6
+  smart_quotes: lsquo,rsquo,ldquo,rdquo
+  enable_coderay: false
 
-  # generate social links in footer
-  # supported colors: green, red, orange, blue, cyan, pink, teal, yellow, indigo, purple
-  social_links:
-    - url: https://t.me/Twanislas
-      icon: telegram
-      color: cyan
-    - url: https://twitter.com/Twanislas
-      icon: twitter-square
-      color: cyan
-    - url: https://github.com/Twanislas
-      icon: github-square
-      color: purple
-avatar_source: github
-github_username: Twanislas
-paginate: 5
-paginate_path: "/blog/page:num/"
+sass:
+  sass_dir: _sass
+  style: compressed
 
+# Outputting
+permalink: /:categories/:title/
+paginate: 5 # amount of posts to show
+paginate_path: /page:num/
+timezone: Europe/Brussels
 
 plugins:
-- jekyll-feed
-- jekyll-gist
-- jekyll-github-metadata
-- jekyll-paginate
-- jekyll-seo-tag
-- jekyll-sitemap
-- jekyll-titles-from-headings
+  - jekyll-feed
+  - jekyll-gist
+  - jekyll-github-metadata
+  - jekyll-include-cache
+  - jekyll-paginate
+  - jekyll-seo-tag
+  - jekyll-sitemap
+
+whitelist:
+  - jekyll-feed
+  - jekyll-gist
+  - jekyll-github-metadata
+  - jekyll-include-cache
+  - jekyll-paginate
+  - jekyll-seo-tag
+  - jekyll-sitemap
+
+category_archive:
+  type: liquid
+  path: /categories/
+tag_archive:
+  type: liquid
+  path: /tags/
+
+compress_html:
+  clippings: all
+  ignore:
+    envs: development
+
+
+# Defaults
+defaults:
+  # _posts
+  - scope:
+      path: ""
+      type: posts
+    values:
+      layout: single
+      author_profile: true
+      read_time: true
+      comments: # true
+      share: true
+      related: true
+      show_date: true
+      toc: true
+      toc_sticky: true

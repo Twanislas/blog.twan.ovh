@@ -1,6 +1,9 @@
 ---
-layout: post
 title: "Plex in LXC on Proxmox, with Nvidia GPU passthrough"
+categories:
+  - Home server
+tags:
+  - Proxmox
 ---
 
 Here's how I got my Plex server running inside an unprivileged CT on Proxmox, passing my mighty GTX 680 for transcodes. Bear in mind that this how _I_ did it. If you want to do the same, you'll have to adapt some commands and configs to your own setup.
@@ -50,6 +53,7 @@ fi
 ```
 
 **Important:** Don't forget to reboot your host after the driver install.
+{: .notice}
 
 You can test if the install was successful by running `nvidia-smi`, it should show details about your GPU.
 
