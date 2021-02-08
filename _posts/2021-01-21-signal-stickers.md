@@ -12,4 +12,4 @@ Bonus point: it's community driven. So if you create stickers of find some that 
 
 What are your favorites ? Mine's [Rick and Morty pack](https://signalstickers.com/pack/d9972b04ad521cf093a92b4a5287a93e){:target="_blank"} !
 
-![Morty](/assets/images/morty.png)
+![Morty](/assets/images/posts/morty.png){: .align-center}
