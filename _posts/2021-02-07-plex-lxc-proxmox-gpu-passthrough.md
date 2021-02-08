@@ -1,6 +1,6 @@
 ---
 title: "Plex in LXC on Proxmox, with Nvidia GPU passthrough"
-category: Home server
+category: HomeLab
 tags: Proxmox
 ---
 
